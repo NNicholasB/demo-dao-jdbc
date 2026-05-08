@@ -34,5 +34,11 @@ public class Program {
         Seller news=new Seller(null,"Greg","greg@gmail.com",new Date(),4000.0,department);
         sld.insert(news);
         System.out.println("inserted! new id="+news.getId());
+
+        System.out.println("\n====TEST 5: seller update==========");
+        Seller sell = sld.findById(1);
+        sell.setName("Martha Waine");
+        sld.update(sell);
+        System.out.println("update completed"+sell);
     }
 }
